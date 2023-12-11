@@ -1,9 +1,9 @@
 class formPage{
     elements = {
         Click_On_Forms_Button : () => 
-        cy.get(':nth-child(2) > :nth-child(1) > .card-body').click({force:true}),
+        cy.get(':nth-child(2) > :nth-child(1) > .card-body').click(),
         Click_On_Practice_Form_Button : () => 
-        cy.get(':nth-child(2) > .element-list > .menu-list > #item-0').click({force:true}),
+        cy.get(':nth-child(2) > .element-list > .menu-list > #item-0').click(),
         Enter_FirstName : () => 
         cy.get('#firstName'),
         Enter_LastName : () => 
@@ -11,35 +11,35 @@ class formPage{
         Enter_UserEmail : () => 
         cy.get('#userEmail'),
         Click_On_Gender_Radio_Button : () =>
-        cy.get('#genterWrapper > .col-md-9 > :nth-child(1) > .custom-control-label').click({force:true}),
+        cy.get('#genterWrapper > .col-md-9 > :nth-child(1) > .custom-control-label').click(),
         Enter_MobileNumber : () =>
         cy.get('#userNumber'),
         Click_On_Date_Of_Birth_Calander: () => 
-        cy.get('#dateOfBirthInput').click({force:true}),
+        cy.get('#dateOfBirthInput').click(),
         Click_On_Any_Date : () => 
-        cy.get(':nth-child(2) > .react-datepicker__day--005').click({force:true}),
+        cy.get(':nth-child(2) > .react-datepicker__day--005').click(),
         Enter_Subject : () =>
         cy.get('.subjects-auto-complete__value-container'),
         Enter_Subject_Input : () =>
-        cy.get('#react-select-2-option-0').click({force:true}),
+        cy.get('#react-select-2-option-0').click(),
         Click_On_Hobbies_Radio_Button : () => 
-        cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(3) > .custom-control-label').click({force:true}),
+        cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(3) > .custom-control-label').click(),
         Select_Image : () =>
         cy.get('input[type="file"]').eq(0).attachFile('Task_1/image1.jpg', { subjectType: 'input' }),
         Enter_Address: () => 
         cy.get('#currentAddress'),
         Select_State : () => 
-        cy.contains("Select State").click({ force: true }),
+        cy.contains("Select State").click(),
         Select_First_State : () =>
-        cy.get('#react-select-3-option-0').click({force:true}),
+        cy.get('#react-select-3-option-0').click(),
         Select_City : () => 
-        cy.contains("Select City").click({ force: true }),
+        cy.contains("Select City").click(),
         Select_First_City: () =>
-        cy.get('#react-select-4-option-0').click({force:true}),
+        cy.get('#react-select-4-option-0').click(),
         Enter_Submit : () => 
-        cy.get('#submit').click({force:true}),
+        cy.get('#submit').click(),
         Enter_Close : () => 
-        cy.get('#closeLargeModal').click({force:true}),
+        cy.get('#closeLargeModal').click(),
     };
 
     form_Page () {
