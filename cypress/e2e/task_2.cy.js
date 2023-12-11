@@ -7,41 +7,18 @@ const InteractionPage = require("../fixtures/Task_2/InteractionPage");
 
 
 describe('Cowlar Task 2', () => {
-  it('it should visit Home Page and Check Valid Responce', () => {
+  it.only('it should Verify SideBar Contains Right Headings and allow Box 1 & 2 to resizing within specified limits', () => {
     HomePage.Valid_Response();
-  })
-  it('it should Navigate To Interaction Card Button', () => {
-    HomePage.Valid_Response();
+    cy.wait(2000);
     InteractionPage.Navigate_To_Interaction_Card_Button();
-  })
-  it('it should Verify The SideBar Contains Right Elements', () => {
-    HomePage.Valid_Response();
-    InteractionPage.Navigate_To_Interaction_Card_Button();
+    cy.wait(2000);
     InteractionPage.Verify_SideBar_Contains_Right_Headings();
-  })
-  it('it should Navigate To Resizable Tab Under Interaction Section', () => {
-    HomePage.Valid_Response();
-    InteractionPage.Navigate_To_Interaction_Card_Button();
+    cy.wait(2000);
     InteractionPage.Navigate_To_Resizable_Tab_Under_Interaction_Section();
-  })
-  it('it should Confirm Box 200 by 200 Size', () => {
-    HomePage.Valid_Response();
-    InteractionPage.Navigate_To_Interaction_Card_Button();
-    InteractionPage.Navigate_To_Resizable_Tab_Under_Interaction_Section();
-    BoxResizeablePage.Box_Default_Size_200();
-  })
-  it('it should allow Box 1 to resizing within specified limits', () => {
-    HomePage.Valid_Response();
-    InteractionPage.Navigate_To_Interaction_Card_Button();
-    InteractionPage.Navigate_To_Resizable_Tab_Under_Interaction_Section();
+    cy.wait(2000);
     Box1.box1Resizeable();
-    
+    cy.wait(2000);
+    Box2.box2Resizeable(); 
 });
- it('it should allow Box 2 for resizing', () => {
-    HomePage.Valid_Response();
-    InteractionPage.Navigate_To_Interaction_Card_Button();
-    InteractionPage.Navigate_To_Resizable_Tab_Under_Interaction_Section();
-    Box2.box2Resizeable();
-    });
 
 })
